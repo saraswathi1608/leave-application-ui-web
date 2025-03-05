@@ -1,0 +1,48 @@
+/* LocateColleague.css */
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select-container .css-yk16xz-control {
+    flex-grow: 1;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.emp-details {
+    margin-top: 20px;
+    background-color: #d6eaf8 ;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emp-details h2 {
+    margin-bottom: 15px;
+}
+
+.emp-details p {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .select-container {
+        flex-direction: column;
+    }
+}

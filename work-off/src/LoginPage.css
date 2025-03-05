@@ -1,0 +1,189 @@
+/* Updated LoginPage.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Set the rest of the page background to white */
+}
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally and vertically */
+  height: 100vh;
+  /*background: url(./images/Work-Hours.jpg) no-repeat center center fixed;  Background image 
+  background-size: cover; /* Ensure the background image covers the whole wrapper */
+}
+
+.login-container {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 350px;
+  height: 400px; /* Decrease height for a rectangular shape */
+  text-align: center;
+  color: #fff;
+  margin-right: 5%; /* Move the container slightly to the left */
+}
+
+.login-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.icon {
+  color: #bbb;
+  margin-right: 10px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.login-button:hover {
+  background-color: #1662c4;
+}
+
+.forgot-password {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+}
+
+.modal-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profileActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #1662c4;
+}
+
+/* Password Sent Message */
+.password-sent-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  text-align: center;
+}
+
+/* Error message styling */
+.error-message {
+  color: red; /* Set error messages to red */
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Additional CSS for password visibility toggle */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #bbb;
+}
+
+.password-toggle:hover {
+  color: #bbb;
+}
+
+.password-input {
+  padding-right: 40px; /* Add space for the eye icon */
+}
+

@@ -1,0 +1,68 @@
+/* Table Styles */
+.leaveRequestTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* Ensures columns are fixed width */
+}
+
+.leaveRequestTable th, .leaveRequestTable td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: left;
+  word-wrap: break-word; /* Ensure long words break and do not overflow */
+}
+
+.leaveRequestTable th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.leaveRequestTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.leaveRequestTable tr:hover {
+  background-color: #e9f7ff;
+}
+
+/* Button Styles */
+.acceptButton, .rejectButton {
+  padding: 8px 12px; /* Increased padding for better touch targets */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 14px; /* Ensured font size is readable on smaller screens */
+}
+
+.acceptButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.rejectButton {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaveRequestTable th, .leaveRequestTable td {
+    padding: 8px; /* Reduced padding for smaller screens */
+    font-size: 12px; /* Reduced font size for better fit */
+  }
+
+  .acceptButton, .rejectButton {
+    padding: 5px 8px; /* Adjusted padding for better fit on mobile */
+    font-size: 12px; /* Adjusted font size for readability */
+  }
+}
+
+/* Table Container to Handle Overflow */
+.table-container {
+  overflow-x: auto; /* Add horizontal scroll if necessary */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin: 0 10px; /* Add some margin to the container */
+}

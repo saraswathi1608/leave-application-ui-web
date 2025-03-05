@@ -1,0 +1,30 @@
+/* App.css */
+body {
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.App {
+  height: 100vh; /* Set height of the App container to full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #5499c7;
+  height: 40px;
+  padding-left : 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: #fdfefe;
+}
+
+main {
+  flex: 1; /* Allow main content to expand and take remaining height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+}

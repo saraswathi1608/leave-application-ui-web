@@ -1,0 +1,163 @@
+/* Container Styles */
+.holidayList-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start; /* Align items to the top to prevent centering issues */
+  height: auto; /* Adjust height to fit content */
+}
+
+.holidayList-tiles {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #ddd;
+  height: 100%; /* Full height of container */
+}
+
+.holidayList-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tile {
+  background-color: #339af0;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tile:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.tile.selected {
+  background-color: #27ae60; /* Darker green for selected tile */
+  border: 2px solid #004494; /* Darker border for selected tile */
+  font-weight: bold;
+  color: #1c2833;
+}
+
+.holidayList-content {
+  flex: 2;
+  padding: 20px;
+  background-color: #fff;
+  height: 100%; /* Full height of container */
+}
+
+/* Table Container */
+.holidayList-tableContainer {
+  height: calc(100% - 150px); /* Adjust to fit within the content area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Add horizontal scroll if necessary */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Table Styles */
+.holidayList-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* Ensures columns are fixed width */
+}
+
+.holidayList-table th, .holidayList-table td {
+  border: 1px solid #ddd;
+  padding: 8px; /* Increased padding for better spacing */
+  text-align: left;
+  word-wrap: break-word; /* Ensure long words break and do not overflow */
+}
+
+.holidayList-table th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.holidayList-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.holidayList-table tr:hover {
+  background-color: #e9f7ff;
+}
+
+/* Loading Styles */
+.holidayList-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets and smaller desktops */
+  .holidayList-title {
+    font-size: 1.25rem;
+  }
+
+  .tile {
+    width: 80px; /* Adjust tile size */
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+  .holidayList-container {
+    flex-direction: column; /* Stack tiles and content vertically */
+    align-items: stretch;
+  }
+
+  .holidayList-tiles {
+    border-right: none; /* Remove right border on mobile */
+    border-bottom: 2px solid #ddd; /* Add bottom border instead */
+    height: auto; /* Allow tiles section to adjust height */
+    padding-bottom: 10px; /* Adjust padding */
+  }
+
+  .holidayList-title {
+    font-size: 1.1rem;
+  }
+
+  .tile {
+    width: auto; /* Allow tiles to expand to content width */
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .holidayList-content {
+    padding: 10px;
+  }
+
+  .holidayList-tableContainer {
+    height: auto; /* Remove fixed height on mobile */
+  }
+
+  .holidayList-table th, .holidayList-table td {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) { /* Small mobile devices */
+  .holidayList-title {
+    font-size: 1rem;
+  }
+
+  .tile {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .holidayList-table th, .holidayList-table td {
+    font-size: 10px; /* Further reduce font size for very small screens */
+  }
+}
